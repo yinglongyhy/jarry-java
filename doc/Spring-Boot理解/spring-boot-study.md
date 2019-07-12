@@ -267,7 +267,11 @@ Controller类方法返回字符串可以指定逻辑视图名，通过视图解�
 
 即 `默认前缀+字符串+默认后缀`拼接成完整路径
 
+<font color='red'>直接访问页面，不经过Controller</font>
+
 #### Redirect重定向
+
+<font color='red'>重定向到Controller</font>
 
 Contrller类方法返回结果重定向到一个url地址，如下商品信息修改提交后重定向到商品查询方法，参数无法直接带到商品查询方法中。
 
@@ -291,6 +295,8 @@ return "redirect:/item/itemList.action?id=xxx&name=xxx";
 ==但如果你使用的是Model接口，那么SpringMVC框架会自动将Model中的数据拼装到`/item/itemList.action`后面。== <font color='red'>?????</font> 可能是因为我测试时用的不是JSP，而是HTML
 
 #### forward转发
+
+<font color='red'>转发到Controller</font>
 
 Controller类方法执行后继续执行另一个Controller类方法，如下商品修改提交后转向到商品修改页面，修改商品的id参数可以直接带到商品修改方法中。
 

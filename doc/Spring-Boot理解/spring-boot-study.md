@@ -23,8 +23,25 @@ public String test(@PathVariable("openId") Long openId,@PathVariable("name") Str
 使用`RequestParam`注解(Spring专属),或者`QueryParam`注解(Java标准),从url的query部分(?后内容)获取参数，而对应的url映射,不需要像占位符那样列出入参的名字
 
 ```java
+URL=/test?openId=11&name=li
+
+
 @GetMapping("/test")
 public String test(@RequestParam("openId") Long openId,@RequestParam("name") String name){
+    //here we get openId, name from url
+    // 如果url为/test?openId=11&name=li
+    // 则openId=11, name=li
+    
+    // 如果不确定url是否有openId, 可以
+    // @RequestParam(value="openId", required=false)
+    // 这样就不会因为匹配不上而报错
+    
+    return "test";
+}
+
+
+@GetMapping("/test")
+public String test(Long openId, String name){ // 可以不写@RequestParam，不过变量名要和query部分一致
     //here we get openId, name from url
     // 如果url为/test?openId=11&name=li
     // 则openId=11, name=li
@@ -360,3 +377,17 @@ webRequest.setAttribute(key(String), value(Object),RequestAttributes.SCOPE_SESSI
 
 - @GetMapping是一个组合注解，是@RequestMapping(method = RequestMethod.GET)的缩写
 - @PostMapping是一个组合注解，是@RequestMapping(method = RequestMethod.POST)的缩写
+
+
+
+
+
+
+
+
+
+
+
+
+
+被`@bean`标注的方法会被注册成`bean`，如果调用该方法，就会在bean仓库中查找。

@@ -2,9 +2,11 @@ package com.yinglongyhy.o2o.repository;
 
 import com.yinglongyhy.o2o.entity.Product;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface ProductRepository {
 	/**
 	 * 查询商品列表并分页，可输入的条件有：商品名（模糊），商品状态，店铺Id,商品类别

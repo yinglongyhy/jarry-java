@@ -2,9 +2,11 @@ package com.yinglongyhy.o2o.repository;
 
 import com.yinglongyhy.o2o.entity.ProductCategory;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface ProductCategoryRepository {
 	/**
 	 * 通过employee id 查询店铺

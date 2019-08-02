@@ -2,9 +2,11 @@ package com.yinglongyhy.o2o.repository;
 
 import com.yinglongyhy.o2o.entity.LocalAuth;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.Date;
 
+@Repository
 public interface LocalAuthRepository {
 
 	/**

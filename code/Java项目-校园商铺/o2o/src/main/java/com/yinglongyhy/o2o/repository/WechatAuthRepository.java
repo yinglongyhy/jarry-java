@@ -1,7 +1,9 @@
 package com.yinglongyhy.o2o.repository;
 
 import com.yinglongyhy.o2o.entity.WechatAuth;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface WechatAuthRepository {
 	/**
 	 * 

@@ -2,9 +2,11 @@ package com.yinglongyhy.o2o.repository;
 
 import com.yinglongyhy.o2o.entity.ShopAuthMap;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface ShopAuthMapRepository {
 	/**
 	 * 分页列出店铺下面的授权信息

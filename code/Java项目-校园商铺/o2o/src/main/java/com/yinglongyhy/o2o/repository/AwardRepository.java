@@ -2,9 +2,11 @@ package com.yinglongyhy.o2o.repository;
 
 import com.yinglongyhy.o2o.entity.Award;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
+@Repository
 public interface AwardRepository {
 	List<Award> queryAwardList(@Param("awardCondition") Award awardCondition,
 							   @Param("rowIndex") int rowIndex, @Param("pageSize") int pageSize);
